@@ -32,4 +32,10 @@ pyinstaller --onefile your_script.py
 
 # Run the executable
 dist/your_script.exe
+----------------------------------------
+To Use the application:
+
+1. Unzip
+2. Run the application
+3. Select the folder that contain your documents
 
