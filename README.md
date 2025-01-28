@@ -30,8 +30,6 @@ cd path/to/your_script_directory
 Create the executable
 pyinstaller --onefile your_script.py
 
-Run the executable
-dist/your_script.exe
 ----------------------------------------
 # To Use the application:
 
