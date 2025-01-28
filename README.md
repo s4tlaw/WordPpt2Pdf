@@ -11,6 +11,8 @@ What I prompt to copilot is
 And Copilot will provide different codes and method for this project.
 I found win32com.client seems to be the more reliable method.**
 
+--------
+# Making some adjustment in the Copilot code
 However for some reason the selected folder cannot be read by Presentation.Open.
 The original version is:
 a = select_folder() # a= C:/xxxxxxx/xxxx/
