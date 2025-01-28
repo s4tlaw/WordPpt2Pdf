@@ -8,9 +8,7 @@ What I prompt to copilot is
 2. Base on the program you provided, add one more function to open a dialog box for selecting the folder path
 
 **There is many ways to convert documents to pdf. 
-
 And Copilot will provide different codes and method for this project.
-
 I found win32com.client seems to be the more reliable method.**
 
 However for some reason the selected folder cannot be read by Presentation.Open.
