@@ -15,7 +15,7 @@ def convert_pptx_to_pdf(input_file_path, output_file_path):
     try:
         powerpoint = win32com.client.Dispatch("PowerPoint.Application")
         powerpoint.Visible = 1
-        presentation = powerpoint.Presentations.Open(input_file_path, WithWindow=False)
+        presentation = powerpoint.Presentations.Open(input_file_path)
         presentation.SaveAs(output_file_path, 32)  # 32 is the format for PDF
         presentation.Close()
         powerpoint.Quit()
@@ -26,9 +26,9 @@ def convert_pptx_to_pdf(input_file_path, output_file_path):
 def convert_docx_to_pdf(input_file_path, output_file_path):
     try:
         word = win32com.client.Dispatch('Word.Application')
-        word.Visible = 0  # Set to 0 to hide the window
-        document = word.Documents.Open(input_file_path, Visible=False)
-        document.SaveAs(output_file_path, FileFormat=17)  # 17 is the format for PDF
+        word.Visible = 1  # Set to 0 to hide the window
+        document = word.Documents.Open(input_file_path)
+        document.SaveAs(output_file_path, 17)  # 17 is the format for PDF
         document.Close()
         word.Quit()
     except Exception as e:
@@ -54,11 +54,11 @@ if input_folder_path:
 
         print(f"Converting {input_file_path} to {output_file_path}...")
 
-        if file_extension.lower() == ".pptx" or ".ppt":
+        if file_extension.lower().endswith((".pptx" , ".ppt")):
             convert_pptx_to_pdf(input_file_path, output_file_path)
-        elif file_extension.lower() == ".docx":
+        elif file_extension.lower().endswith(".docx"):
             convert_docx_to_pdf(input_file_path, output_file_path)
-        elif not file_extension.lower() == ".docx" or ".pptx" or ".ppt":
+        elif not file_extension.lower().endswith((".pptx" , ".ppt", ".docx")):
             continue
     
     print("Conversion complete. Check the 'Converted' folder for PDF files.")
