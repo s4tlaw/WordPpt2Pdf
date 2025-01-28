@@ -15,3 +15,21 @@ Thus I made a replace for the string path
 input_folder_path = input_folder_path_old.replace("/", "\\")
 
 C:\xxxxx\xxxx can now be read by Presentation.Open.
+
+-------------------------------------
+
+Can further package with pyinstaller to run on any computer without installing any environment.
+
+In CMD:
+# Install PyInstaller
+pip install pyinstaller
+
+# Navigate to your script's directory
+cd path/to/your_script_directory
+
+# Create the executable
+pyinstaller --onefile your_script.py
+
+# Run the executable
+dist/your_script.exe
+
