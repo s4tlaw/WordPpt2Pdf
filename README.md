@@ -18,22 +18,22 @@ C:\xxxxx\xxxx can now be read by Presentation.Open.
 
 -------------------------------------
 
-Can further package with pyinstaller to run on any computer without installing any environment.
+# Can further package with pyinstaller to run on any computer without installing any environment.
 
 In CMD:
-# Install PyInstaller
+Install PyInstaller
 pip install pyinstaller
 
-# Navigate to your script's directory
+Navigate to your script's directory
 cd path/to/your_script_directory
 
-# Create the executable
+Create the executable
 pyinstaller --onefile your_script.py
 
-# Run the executable
+Run the executable
 dist/your_script.exe
 ----------------------------------------
-To Use the application:
+# To Use the application:
 
 1. Unzip
 2. Run the application
